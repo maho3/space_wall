@@ -17,9 +17,11 @@ while [ $SECONDS -lt $end ]; do
 
     ra=$(sed -n "$i p" objects.csv | cut -d, -f 2)
     dec=$(sed -n "$i p" objects.csv | cut -d, -f 3)
+    
+    printf "ra: $ra\ndec: $dec\n"
 
-    wget -nv -O "/home/annam/Pictures/Wallpapers/sdss.jpg" "http://skyserver.sdss.org/dr12/SkyserverWS/ImgCutout/getjpeg?ra=$ra&dec=$dec&width=1920&height=1080"
+    wget -nv -O "/home/annam/Pictures/Wallpapers/sdss.jpg" "http://skyserver.sdss.org/dr12/SkyserverWS/ImgCutout/getjpeg?ra=$ra&dec=$dec&width=1920&height=1080&scale=0.5"
 
-    sleep 30s
+    sleep 45s
     
 done

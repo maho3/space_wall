@@ -3,8 +3,6 @@
 # Get new objects at http://skyserver.sdss.org/dr7/en/tools/search/form/default.aspx
 # See user guide at http://skyserver.sdss.org/dr7/en/tools/search/form/guide.asp#mags
 
-# Convert 2 images to 1 using ImageMagick's command $convert.
-# This is useful if your screen resolution is higher than SkyServer's resolution limit 1920x1920
 
 cd /home/annam/Desktop/git/space_wall
 

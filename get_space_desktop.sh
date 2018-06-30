@@ -28,15 +28,15 @@ while [ $SECONDS -lt $end ]; do
     
     ra=$(echo "$ra+$dra" | bc)
     
-    wget -nv -O "sdss_1.jpg" "http://skyserver.sdss.org/dr12/SkyserverWS/ImgCutout/getjpeg?ra=$ra&dec=$dec&width=2048&height=2048&scale=0.5"
+    wget -nv -O "/home/maho/git/space_wall/sdss_1.jpg" "http://skyserver.sdss.org/dr12/SkyserverWS/ImgCutout/getjpeg?ra=$ra&dec=$dec&width=2048&height=2048&scale=0.5"
     
     dra=$(echo "0.2534/c($dec/180*$pi)" | bc -l)
     
     ra=$(echo "$ra-$dra" | bc)
 
-    wget -nv -O "sdss_2.jpg" "http://skyserver.sdss.org/dr12/SkyserverWS/ImgCutout/getjpeg?ra=$ra&dec=$dec&width=1592&height=2048&scale=0.5"
+    wget -nv -O "/home/maho/git/space_wall/sdss_2.jpg" "http://skyserver.sdss.org/dr12/SkyserverWS/ImgCutout/getjpeg?ra=$ra&dec=$dec&width=1592&height=2048&scale=0.5"
     
-    convert "sdss_1.jpg" "sdss_2.jpg" +append "/home/maho/Pictures/Wallpapers/sdss.jpg"
+    convert "/home/maho/git/space_wall/sdss_1.jpg" "/home/maho/git/space_wall/sdss_2.jpg" +append "/home/maho/Pictures/Wallpapers/sdss.jpg"
 
     sleep 45s
     
